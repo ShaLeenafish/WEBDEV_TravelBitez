@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>TravelBitez</title>
+    <link rel="stylesheet" href="page1.css">
+  </head>
+  <body>
+
+      <header class="main-header">
+        <h1>TravelBitez</h1>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="page2_1.html">Recipes</a></li>
+            <li><a href="page3.html">Shop</a></li>
+          </ul>
+        </nav>
+      </header>
+      <h2>About TravelBitez</h2>
+      <p>Welcome to TravelBitez, a baking recipes website where you will meet popular and delicious dessert recipes for your loved ones. With this websites, you will have a pleasant baking experience with your loved ones together. Recipes range from kids-friendly recipes to family-event recipes. <br>
+      Hope you will enjoy and happy baking!!! <br>
+    ~TravelBitez</p>
+      <hr>
+      <h2>Recipes</h2>
+      <div class="images">
+        <div class="colimg">
+          <p>Bread Pudding</p>
+          <img src="Images/Screenshot_20210714-102219_Instagram.jpg" style="width: 80%"; height="325" alt="">
+        </div>
+        <div class="colimg">
+          <p>Cinnamon Rolls</p>
+          <img src="Images/Screenshot_20210714-102227_Instagram.jpg" style='width: 80%'; height="325" alt="">
+        </div>
+        <div class="colimg">
+          <p>Dalgona Cookie</p>
+          <img src="Images/Screenshot_20210714-102234_Instagram.jpg" style="width: 80%"; height='325' alt="">
+        </div>
+
+      </div>
+      <br>
+      <hr>
+      <div class="form1">
+          <form method="get" action="FormProcessor2.html">
+          <h3>Leave a reply:D !</h3>
+          <fieldset>
+            <label for="bdate">Today's Date:</label>
+            <input type="date" id="bdate" name="bdate" value="" required / placeholder="dd/mm/yyyy">
+            <br>
+            <label for="names">Name:</label>
+            <input type="text" id="names" name="names" value="" required/>
+            <br>
+            <label for="gender">Gender</label><br>
+            <input type="radio" id='gender' name="gender" value="boy" required/>Male<br>
+            <input type="radio" id="gender" name="gender" value="girl" required/>Female<br>
+            <label for="email">Email:</label>
+            <input type="text" id = "email" name="email" value="" required/><br>
+            <label for="contact">Contact No.:</label>
+            <input type="tel" id="contact" name="contact" value="" placeholder="(+65)12345678"  pattern="[0-9]{8}" required/>
+            <br>
+            <label for="recipe">Choose Recipes:</label> <br>
+            <input list="recipes" id="recipe" name="recipe" required>
+            <datalist id="recipes">
+              <option value="Bread Pudding">
+              <option value="Cinnamon Rolls">
+              <option value="Dalgona Cookies">
+            </datalist>
+            <br>
+            <label for="comment">Comment on chosen recipe:</label><br>
+            <textarea id='comment' name="comment" rows="5" cols="50"></textarea>
+            <br>
+            <label for="feedback">Recommend any recipes? :</label><br>
+            <textarea id='feedback' name="feedback" rows="5" cols="50"></textarea>
+
+          </fieldset>
+          <input type="submit" name="submit" value="submit">
+          <input type="reset" name="reset" value="reset">
+        </form>
+      </div>
+      <div class="logo">
+        <div class="tblogo">
+          <img src="Images/TravelBitez.png" alt="">
+          <p>Thank you for visiting my website!!! Have a lovely day and come support again!!!<br>
+          ~creator of TravelBitez, Nur Syalinah </p>
+        </div>
+      </div>
+
+  </body>
+</html>
+
+
+
+<!-- Patch form with a form processor, and added description in recipes page -->

@@ -1,0 +1,113 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Form Processor</title>
+<style>
+article {
+		font-family:cursive;
+		line-height:2em;
+		font-size:15px;
+		padding:20px;
+		background-color:#FFFF99;
+		margin:10px auto;
+		width:500px;
+
+}
+
+ h1 { text-align:center }
+
+.blank {
+	font-weight:900;
+}
+.link{
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+<!-- HIDE FROM INCOMPATIBLE BROWSERS
+
+var formData = location.search;
+formData = formData.substring(1, formData.length);
+while (formData.indexOf("+") != -1) {
+	formData = formData.replace("+", " ");
+}
+formData = unescape(formData);
+var formArray = formData.split("&");
+var para=new Array();
+var age,color,gender;
+
+function setColor(c){
+	var allBlanks=document.getElementsByClassName("blank");
+
+		for (i=0; i<allBlanks.length; i++)
+			allBlanks[i].style.color=c;
+}
+
+
+// STOP HIDING FROM INCOMPATIBLE BROWSERS -->
+</script>
+<article>
+<h1>You have submitted a feedback!!</h1>
+<p>Today's date: <span id="bdate" class="blank"></span> </p>
+<p>Name: <span id='names' class="blank"></span></p>
+<p>Gender: <span id="gender" class="blank"></span></p>
+<p>	Email: <span id="email" class="blank"></span> </p>
+<p>Contact: <span id="contact" class="blank"></span> </p>
+<p>Recipe chosen: <span id="recipe" class="blank"></span> </p>
+<p>Comment on chosen Recipe: <span id="comment" class="blank"></span> </p>
+<p>Recommend new recipes: <span id="feedback" class="blank"></span> </p>
+</article>
+<script>
+for (var i=0; i < formArray.length; ++i) {
+
+	para=formArray[i].split("=");
+
+	switch (para[0]) {
+		case "bdate": //d=para[1].split("-");
+					  //document.getElementById("bdate").innerHTML=d[2]+"/"+d[1]+"/"+d[0];
+					  dd=new Date(para[1]);
+					  document.getElementById("bdate").innerHTML=dd.toDateString();
+					  break;
+	  case "names":
+					document.getElementById("names").innerHTML=para[1];
+					break
+
+	  	break;
+		case "gender":
+					document.getElementById("gender").innerHTML=para[1];
+					gender=para[1];
+					break;
+		case "email":
+					document.getElementById("email").innerHTML=para[1];
+					break;
+
+		case "contact":
+					document.getElementById("contact").innerHTML=para[1];
+					break;
+
+		case "recipe":
+					document.getElementById("recipe").innerHTML=para[1];
+					break;
+	  case "comment":
+					document.getElementById("comment").innerHTML=para[1];
+					break;
+		case "feedback":
+					document.getElementById("feedback").innerHTML=para[1];
+					break;
+
+    }
+
+}
+
+setColor(color);
+
+</script>
+<div class="link">
+	<p> <a href="index.html">Click here</a> to return to home page!!</p>
+</div>
+
+</body>
+</html>
